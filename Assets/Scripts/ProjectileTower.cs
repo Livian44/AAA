@@ -2,13 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using BuildingSystem.Interfaces;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer),typeof(CircleCollider2D))]
-public class ProjectileTower : MonoBehaviour
+public class ProjectileTower : MonoBehaviour , ITower
 {
     [field:SerializeField]
     public TowerType TowerType { get; set; }
+
+    public GameObject GameObject => gameObject;
 
     private float currentReloadTime = 0;
     private Enemy currentTarget;

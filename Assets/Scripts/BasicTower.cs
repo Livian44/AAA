@@ -2,13 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using BuildingSystem.Interfaces;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer),typeof(CircleCollider2D))]
-public class BasicTower : MonoBehaviour
+public class BasicTower : MonoBehaviour , ITower
 {
     [field:SerializeField]
     public TowerType TowerType { get; set; }
+
+    public GameObject GameObject => gameObject;
 
     private float currentReloadTime = 0;
     private Enemy currentTarget;
@@ -56,8 +59,10 @@ public class BasicTower : MonoBehaviour
 
     private void RotateTower()
     {
-        Vector3 direction = (currentTarget.transform.position-transform.position).normalized;
-        transform.rotation = Quaternion.FromToRotation(Vector3.up, direction);
+        Vector3 targetDirection = (currentTarget.transform.position - transform.position);
+        targetDirection.z = 0;
+        float angle = Vector3.Angle(transform.up, targetDirection.normalized);
+        transform.Rotate(Vector3.back,angle);
     }
 
 

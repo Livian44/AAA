@@ -1827,6 +1827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2659753786636897343}
+  - component: {fileID: 6827845384514848696}
   m_Layer: 0
   m_Name: Level0_TurretPlacements
   m_TagString: Untagged
@@ -1850,6 +1851,21 @@ Transform:
   m_Father: {fileID: 6827845385201344409}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6827845384514848696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8648347499306819702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e784e6e5bb64fa1a66f0f48173dac8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerTilemap: {fileID: 4303803829655460433}
+  towerGrid: {fileID: 4618638146523474567}
+  camera: {fileID: 0}
 --- !u!1001 &6827845383948165761
 PrefabInstance:
   m_ObjectHideFlags: 0

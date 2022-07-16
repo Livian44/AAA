@@ -4459,7 +4459,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.402338, y: 0.5}
+      pivot: {x: 0.5012293, y: 0.44457698}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4850,7 +4850,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: S_Enemty_02
+      name: S_Enemy_02
       rect:
         serializedVersion: 2
         x: 256
@@ -4976,7 +4976,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: towerDefense_tilesheet@2_232
+      name: S_Rocket_Launcher_00
       rect:
         serializedVersion: 2
         x: 1024
@@ -5396,7 +5396,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: towerDefense_tilesheet@2_252
+      name: S_Turret_Base_00
       rect:
         serializedVersion: 2
         x: 1536
@@ -5417,7 +5417,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: towerDefense_tilesheet@2_253
+      name: S_Turret_Base_01
       rect:
         serializedVersion: 2
         x: 1664
@@ -5438,7 +5438,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: towerDefense_tilesheet@2_254
+      name: S_Turret_Base_02
       rect:
         serializedVersion: 2
         x: 1792
@@ -5459,7 +5459,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: towerDefense_tilesheet@2_255
+      name: S_Turret_Base_03
       rect:
         serializedVersion: 2
         x: 1920
@@ -5517,6 +5517,7 @@ TextureImporter:
       towerDefense_tilesheet@2_106: -663347576
       towerDefense_tilesheet@2_111: -471986483
       towerDefense_tilesheet@2_105: -372616933
+      S_Turret_Base_03: -1136090585
       towerDefense_tilesheet@2_156: -1158121469
       towerDefense_tilesheet@2_11: 725123693
       S_Hedge: 1684105010
@@ -5529,7 +5530,6 @@ TextureImporter:
       towerDefense_tilesheet@2_134: -929099026
       towerDefense_tilesheet@2_149: -1745702604
       towerDefense_tilesheet@2_168: 130350770
-      towerDefense_tilesheet@2_253: 87960389
       towerDefense_tilesheet@2_14: 1905005665
       towerDefense_tilesheet@2_25: -1913113523
       towerDefense_tilesheet@2_39: 1302437875
@@ -5585,8 +5585,10 @@ TextureImporter:
       towerDefense_tilesheet@2_222: 292472324
       towerDefense_tilesheet@2_3: -567838062
       towerDefense_tilesheet@2_244: -553789742
+      S_Turret_Base_00: 1654287515
       S_Plant_00: 35881471
       towerDefense_tilesheet@2_24: -264990416
+      S_Enemy_02: -1583296957
       towerDefense_tilesheet@2_117: 1361459036
       S_Fire_02: 1690615190
       towerDefense_tilesheet@2_21: -1010589272
@@ -5601,7 +5603,6 @@ TextureImporter:
       towerDefense_tilesheet@2_100: -1266459498
       towerDefense_tilesheet@2_144: -1365242781
       towerDefense_tilesheet@2_72: 1484212215
-      S_Enemty_02: -1583296957
       towerDefense_tilesheet@2_205: -446253891
       towerDefense_tilesheet@2_147: 279400539
       towerDefense_tilesheet@2_55: -1366299079
@@ -5620,10 +5621,9 @@ TextureImporter:
       towerDefense_tilesheet@2_27: 62162445
       towerDefense_tilesheet@2_78: -746769103
       towerDefense_tilesheet@2_245: -1586048679
-      towerDefense_tilesheet@2_232: -1929965822
+      S_Turret_Base_01: 87960389
       towerDefense_tilesheet@2_169: 1533034184
       towerDefense_tilesheet@2_199: 1569488041
-      towerDefense_tilesheet@2_254: 323063318
       S_Enemy_01: 1549585826
       towerDefense_tilesheet@2_5: 2099058331
       towerDefense_tilesheet@2_88: -143463173
@@ -5657,7 +5657,6 @@ TextureImporter:
       towerDefense_tilesheet@2_125: -833846799
       towerDefense_tilesheet@2_159: 62374792
       towerDefense_tilesheet@2_235: -936561986
-      towerDefense_tilesheet@2_255: -1136090585
       towerDefense_tilesheet@2_109: -1098953183
       towerDefense_tilesheet@2_200: -1891111367
       towerDefense_tilesheet@2_233: 1543221284
@@ -5675,6 +5674,7 @@ TextureImporter:
       S_Plant_01: -1372220515
       towerDefense_tilesheet@2_75: -178900271
       towerDefense_tilesheet@2_146: 745980198
+      S_Rocket_Launcher_00: -1929965822
       towerDefense_tilesheet@2_164: -1320072096
       towerDefense_tilesheet@2_158: 633856970
       towerDefense_tilesheet@2_73: -1768867578
@@ -5695,12 +5695,12 @@ TextureImporter:
       towerDefense_tilesheet@2_101: -1630431112
       towerDefense_tilesheet@2_64: -2112560074
       towerDefense_tilesheet@2_148: -1115792975
+      S_Turret_Base_02: 323063318
       towerDefense_tilesheet@2_221: -1054024778
       towerDefense_tilesheet@2_80: 1895855657
       towerDefense_tilesheet@2_152: 1043863407
       towerDefense_tilesheet@2_231: 1397309113
       towerDefense_tilesheet@2_110: -695849379
-      towerDefense_tilesheet@2_252: 1654287515
       towerDefense_tilesheet@2_33: 1396522502
       towerDefense_tilesheet@2_217: 1409328669
       S_Tree: 143332275

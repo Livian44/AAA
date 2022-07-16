@@ -21,6 +21,8 @@ public class Level : MonoBehaviour
     public Transform LevelStart => LevelPoints.First();
     public Transform LevelEnd => LevelPoints.Last();
 
+    [SerializeField] 
+    private Transform pathParent;
     private float currentTimer;
 
     private void Start()
@@ -35,6 +37,10 @@ public class Level : MonoBehaviour
 
     public void Update()
     {
+        if (NumberOfEnemies <= 0)
+        {
+            return;
+        }
         currentTimer -= Time.deltaTime;
         if (currentTimer <= 0)
         {
@@ -47,6 +53,7 @@ public class Level : MonoBehaviour
     {
         Enemy selectedEnemy = EnemiesToSpawn[Random.Range(0, EnemiesToSpawn.Count)];
         Instantiate(selectedEnemy.gameObject, LevelStart.position,Quaternion.identity);
+        NumberOfEnemies--;
     }
 
     public Transform GetNextPoint(Transform previousPoint)
@@ -59,5 +66,15 @@ public class Level : MonoBehaviour
         }
 
         return LevelPoints[indexOf + 1];
+    }
+
+    [ContextMenu("Load Path Points")]
+    private void LoadPathPoints()
+    {
+        LevelPoints.Clear();
+        foreach (Transform child in pathParent)
+        {
+            LevelPoints.Add(child);
+        }
     }
 }

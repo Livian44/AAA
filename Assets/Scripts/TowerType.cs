@@ -1,19 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "TowerType", menuName = "TowerType")]
 public class TowerType : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [field:SerializeField]
+    public Sprite Sprite { get; set; }
+    
+    [field: SerializeField] 
+    public Projectile ProjectilePrefab { get; set; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [field: SerializeField] 
+    public int Range { get; set; } = 1;
+
+    [field: SerializeField,Range(0.1f,5f)] 
+    public float ReloadTime { get; set; } = 1;
+
+    [field: SerializeField] 
+    public int Price { get; set; } = 1;
 }

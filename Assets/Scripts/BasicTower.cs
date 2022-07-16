@@ -14,9 +14,22 @@ public class BasicTower : MonoBehaviour
     private Enemy currentTarget;
     private CircleCollider2D collider;
     private List<Enemy> enemiesInRange = new List<Enemy>();
-    Vector3 lastShootingDirection = Vector3.zero;
+    private Vector3 lastShootingDirection = Vector3.zero;
+    private Animator animator;
+    private string animationBoolName = "IsShooting";
     
+
     void Start()
+    {
+        animator = GetComponentInChildren<Animator>();
+        if (animator == null)
+        {
+            Debug.Log("Tower is missing animator!");
+        }
+        ConfigureCollider();
+    }
+
+    private void ConfigureCollider()
     {
         collider = GetComponent<CircleCollider2D>();
         collider.isTrigger = true;
@@ -27,6 +40,7 @@ public class BasicTower : MonoBehaviour
     {
         if (currentTarget == null)
         {
+            animator.SetBool(animationBoolName,false);
             SearchForNewTarget();
             return;
         }
@@ -90,6 +104,7 @@ public class BasicTower : MonoBehaviour
 
     private void AttackEnemy()
     {
+        animator.SetBool(animationBoolName,true);
        currentTarget.ReceiveDamage(TowerType.ProjectilePrefab.ProjectileType.Attack);
     }
 

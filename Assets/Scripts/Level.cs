@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
 public class Level : MonoBehaviour
@@ -21,6 +22,9 @@ public class Level : MonoBehaviour
     public Transform LevelStart => LevelPoints.First();
     public Transform LevelEnd => LevelPoints.Last();
 
+    [field:SerializeField]
+    public Tilemap TurretTilemap { get; set; }
+    
     [SerializeField] 
     private Transform pathParent;
     private float currentTimer;

@@ -61,7 +61,7 @@ public class BasicTower : MonoBehaviour , ITower
     {
         Vector3 targetDirection = (currentTarget.transform.position - transform.position);
         targetDirection.z = 0;
-        float angle = Vector3.Angle(transform.up, targetDirection.normalized);
+        float angle = Vector3.SignedAngle(transform.up, targetDirection.normalized,Vector3.back);
         transform.Rotate(Vector3.back,angle);
     }
 

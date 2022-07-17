@@ -23,6 +23,7 @@ public class UIController : MonoBehaviour
             TowerPlacementController towerPlacementController = FindObjectOfType<TowerPlacementController>();
             towerPlacementController.towerSelected = test.GetComponent<ITower>();
             selected = true;
+            towerPlacementController.ToggleTilemapVisible(true);
         }
 
         if (selected && Input.GetMouseButtonDown(0))
@@ -34,6 +35,8 @@ public class UIController : MonoBehaviour
             if (isTileFree)
             {
                 towerPlacementController.BuildOnSpot(Input.mousePosition);
+                selected = false;
+                towerPlacementController.ToggleTilemapVisible(false);
                 Debug.Log("Building!");
             }
             else

@@ -15,18 +15,29 @@ namespace DefaultNamespace
 
         public ITower towerSelected;
 
+        private TilemapRenderer tilemapRenderer;
+        
+        private void Start()
+        {
+            tilemapRenderer = towerTilemap.GetComponent<TilemapRenderer>();
+        }
+        
+        public void ToggleTilemapVisible(bool isVisible)
+        {
+            tilemapRenderer.enabled = isVisible;
+        }
+
         public void SetSelectedTower(ITower tower)
         {
             towerSelected = tower;
         }
+        
         public void BuildOnSpot(Vector3 screenMousePosition)
         {
             Vector3 mousePosition = camera.ScreenToWorldPoint(screenMousePosition);
             Vector3 mapPoint = GetMapPoint(mousePosition);
             Vector3 worldPoint = GetGridPosition(mousePosition);
             worldPoint += new Vector3(0.5f,0.5f,towerTilemap.transform.position.z+0.1f);
-            //GameObject instanceObject = buildingInstanceFactory.GetBuildingInstance(selectedBuilding);
-            //Vector3 position = MapToWorld(bounds.position);
             Instantiate(towerSelected.GameObject, worldPoint, Quaternion.identity);
             MarkAsUnavaliable(GetGridPosition(mapPoint));
         }

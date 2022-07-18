@@ -545,5 +545,17 @@ PrefabInstance:
       propertyPath: <TimeBetweenEnemySpawns>k__BackingField
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemiesToSpawn>k__BackingField.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemiesToSpawn>k__BackingField.Array.data[1]
+      value: 
+      objectReference: {fileID: 1416653504851928580, guid: 6fe03835ed9fd8845bad483bea7c0e95, type: 3}
+    - target: {fileID: 7823910019636943758, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}

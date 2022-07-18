@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour
     {
         Vector3 targetDirection = (nextPoint.position - transform.position).normalized;
         float speed = EnemyType.Speed * Time.deltaTime;
-        transform.Translate(targetDirection*speed);
+        transform.Translate(targetDirection*speed,Space.World);
         if (Vector3.Distance(transform.position, nextPoint.position) < 0.1f)
         {
             CalculateNextPoint();
@@ -75,9 +75,14 @@ public class Enemy : MonoBehaviour
             Debug.Log("Reached end of the level!");
             GameplayManager.Instance.EnemyReachedLevelEnd(EnemyType);
             KillEnemy();
+            return;
         }
-        
+        Vector3 targetDirection = (nextPoint.position - transform.position).normalized;
+        targetDirection.z = 0;
+        float angle = Vector3.SignedAngle(transform.right, targetDirection.normalized,Vector3.back);
+        transform.Rotate(Vector3.back,angle);
     }
+    
     public void ReceiveDamage(int damage)
     {
         health -= damage;

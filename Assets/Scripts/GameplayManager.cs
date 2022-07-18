@@ -26,6 +26,7 @@ public class GameplayManager : MonoBehaviour
     public Level Level { get; set; }
 
     private int playerHealth = 30;
+    
     public void EnemyReachedLevelEnd(EnemyType enemyType)
     {
         RemovePlayerHealth(enemyType.Attack);

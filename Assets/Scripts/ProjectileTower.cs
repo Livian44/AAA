@@ -87,7 +87,14 @@ public class ProjectileTower : MonoBehaviour , ITower
     {
         Vector3 direction = (currentTarget.transform.position-transform.position).normalized;
         lastShootingDirection = direction;
-        Instantiate(TowerType.ProjectilePrefab, transform.position,Quaternion.FromToRotation(Vector3.up,direction));
+        GameObject projectile = Instantiate(TowerType.ProjectilePrefab.gameObject, transform.position,Quaternion.identity);
+        direction.z = 0;
+        
+        float towerAngle = Vector3.SignedAngle(transform.up, direction.normalized,Vector3.back);
+        transform.Rotate(Vector3.back,towerAngle);
+        
+        float projectileAngle = Vector3.SignedAngle(projectile.transform.up, direction.normalized,Vector3.back);
+        projectile.transform.Rotate(Vector3.back,projectileAngle);
     }
 
     private void OnDrawGizmos()

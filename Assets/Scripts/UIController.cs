@@ -6,7 +6,12 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    [SerializeField] private GameObject test;
+    [SerializeField] 
+    private GameObject basicTower;
+    [SerializeField] 
+    private GameObject basicTower2;
+    [SerializeField] 
+    private GameObject projectileTower;
 
     private bool selected = false;
     // Start is called before the first frame update
@@ -18,19 +23,25 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("d"))
+        if (Input.GetKeyDown("1"))
         {
-            TowerPlacementController towerPlacementController = FindObjectOfType<TowerPlacementController>();
-            towerPlacementController.towerSelected = test.GetComponent<ITower>();
-            selected = true;
-            towerPlacementController.ToggleTilemapVisible(true);
+            SelectTower(basicTower);
+        }
+        
+        if (Input.GetKeyDown("2"))
+        {
+            SelectTower(basicTower2);
+        }
+        
+        if (Input.GetKeyDown("3"))
+        {
+            SelectTower(projectileTower);
         }
 
         if (selected && Input.GetMouseButtonDown(0))
         {
             TowerPlacementController towerPlacementController = FindObjectOfType<TowerPlacementController>();
             Vector3Int position = towerPlacementController.GetClosestTilePosition(Input.mousePosition);
-            Debug.Log(position);
             bool isTileFree = towerPlacementController.IsTileAvaliable(position);
             if (isTileFree)
             {
@@ -44,5 +55,13 @@ public class UIController : MonoBehaviour
                 Debug.Log("Not building");
             }
         }
+    }
+
+    private void SelectTower(GameObject targetTower)
+    {
+        TowerPlacementController towerPlacementController = FindObjectOfType<TowerPlacementController>();
+        towerPlacementController.towerSelected = targetTower.GetComponent<ITower>();
+        selected = true;
+        towerPlacementController.ToggleTilemapVisible(true);
     }
 }

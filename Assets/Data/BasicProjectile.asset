@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986ba70cf5e44ef6aec5b11b54f3ef90, type: 3}
   m_Name: BasicProjectile
   m_EditorClassIdentifier: 
-  <Sprite>k__BackingField: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  <Sprite>k__BackingField: {fileID: 595199004, guid: 77be49ff919a6fd44981b568408412cd, type: 3}
   <Attack>k__BackingField: 1
   <Speed>k__BackingField: 1

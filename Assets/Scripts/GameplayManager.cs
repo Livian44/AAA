@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class GameplayManager : MonoBehaviour
 {
+    public UnityEvent OnEnemyKilled;
+
     public UnityEvent OnGameEnd;
     
     private static GameplayManager instance;
@@ -24,8 +26,17 @@ public class GameplayManager : MonoBehaviour
     
     [field:SerializeField]
     public Level Level { get; set; }
+    [field:SerializeField]
+    public PlayerController PlayerController { get; set; }
 
     private int playerHealth = 30;
+    
+    public void EnemyKilledByPlayer()
+    {
+        PlayerController.IncreasePlayerMoney(1);
+        PlayerController.IncreasePlayerScore(10);
+        OnEnemyKilled.Invoke();
+    }
     
     public void EnemyReachedLevelEnd(EnemyType enemyType)
     {

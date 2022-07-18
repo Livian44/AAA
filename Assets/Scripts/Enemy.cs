@@ -88,6 +88,7 @@ public class Enemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            GameplayManager.Instance.EnemyKilledByPlayer();
             KillEnemy();
         }
     }

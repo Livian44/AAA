@@ -13,6 +13,8 @@ public class Level : MonoBehaviour
     [field:SerializeField]
     public List< EnemyWave> EnemyWaves { get; set; }
     [field:SerializeField]
+    public TowerDatabase AvaliableTowers { get; set; }
+    [field:SerializeField]
     public List<Transform> LevelPoints { get; set; }
     public Transform LevelStart => LevelPoints.First();
     public Transform LevelEnd => LevelPoints.Last();

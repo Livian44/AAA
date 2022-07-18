@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,10 +11,10 @@ public class PlayerController : MonoBehaviour
     public UnityEvent<int> OnPlayerMoneyChange;
 
     [field:SerializeField]
-    private int CurrentScore { get; set; }= 0;
+    public int CurrentScore { get; set; }= 0;
     
     [field:SerializeField]
-    private int CurrentMoney  { get; set; } = 10;
+    public int CurrentMoney  { get; set; } = 10;
 
     public void IncreasePlayerScore(int score)
     {
@@ -24,7 +25,7 @@ public class PlayerController : MonoBehaviour
     public void IncreasePlayerMoney(int money)
     {
         CurrentMoney += money;
-        OnPlayerScoreChange.Invoke(CurrentMoney);
+        OnPlayerMoneyChange.Invoke(CurrentMoney);
     }
     
     public bool HasEnoughMoney(int moneyNeeded)

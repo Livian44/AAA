@@ -471,7 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808bfa3bfa30489c83db15b0349adab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <TowerType>k__BackingField: {fileID: 11400000, guid: 16a09993b05995143943b154140b1534, type: 2}
+  <TowerType>k__BackingField: {fileID: 11400000, guid: 1098db3dabb40e640a999e63e1847147, type: 2}
 --- !u!58 &7191882669043665317
 CircleCollider2D:
   m_ObjectHideFlags: 0

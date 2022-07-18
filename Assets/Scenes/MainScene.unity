@@ -600,6 +600,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
       propertyPath: <TimeBetweenEnemySpawns>k__BackingField
       value: 0.25
       objectReference: {fileID: 0}
@@ -609,6 +613,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
       propertyPath: <EnemiesToSpawn>k__BackingField.Array.data[1]
+      value: 
+      objectReference: {fileID: 1416653504851928580, guid: 6fe03835ed9fd8845bad483bea7c0e95, type: 3}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.data[0].<NumberOfEnemies>k__BackingField
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.data[1].<NumberOfEnemies>k__BackingField
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.data[0].<TimeBetweenEnemySpawns>k__BackingField
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.data[1].<TimeBetweenEnemySpawns>k__BackingField
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.data[0].<EnemiesToSpawn>k__BackingField.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.data[1].<EnemiesToSpawn>k__BackingField.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.data[0].<EnemiesToSpawn>k__BackingField.Array.data[0]
+      value: 
+      objectReference: {fileID: 1416653504851928580, guid: e78d2684c7ce04a4a89aedc31be230a9, type: 3}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.data[1].<EnemiesToSpawn>k__BackingField.Array.data[0]
+      value: 
+      objectReference: {fileID: 1416653504851928580, guid: e78d2684c7ce04a4a89aedc31be230a9, type: 3}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.data[1].<EnemiesToSpawn>k__BackingField.Array.data[1]
       value: 
       objectReference: {fileID: 1416653504851928580, guid: 6fe03835ed9fd8845bad483bea7c0e95, type: 3}
     - target: {fileID: 7823910019636943758, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}

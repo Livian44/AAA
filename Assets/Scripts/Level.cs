@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DefaultNamespace;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
@@ -9,14 +11,7 @@ using Random = UnityEngine.Random;
 public class Level : MonoBehaviour
 {
     [field:SerializeField]
-    public List<Enemy> EnemiesToSpawn { get; set; }
-
-    [field: SerializeField] 
-    public int NumberOfEnemies { get; set; } = 10;
-    
-    [field: SerializeField] 
-    public float TimeBetweenEnemySpawns { get; set; } = 0.5f;
-
+    public List< EnemyWave> EnemyWaves { get; set; }
     [field:SerializeField]
     public List<Transform> LevelPoints { get; set; }
     public Transform LevelStart => LevelPoints.First();
@@ -27,37 +22,58 @@ public class Level : MonoBehaviour
     
     [SerializeField] 
     private Transform pathParent;
-    private float currentTimer;
+    private float currentSpawnTimer;
+    private EnemyWave currentWave;
+    private float timeBetweenWaves = 5;
+    private float currentWaveTimer;
 
     private void Start()
     {
+        currentWaveTimer = timeBetweenWaves;
+        currentWave = EnemyWaves.First();
         ResetSpawnTimer();
     }
 
     private void ResetSpawnTimer()
     {
-        currentTimer = TimeBetweenEnemySpawns;
+        currentSpawnTimer = currentWave.TimeBetweenEnemySpawns;
     }
 
     public void Update()
     {
-        if (NumberOfEnemies <= 0)
+        if (currentWave.NumberOfEnemies <= 0)
         {
+            currentWaveTimer -= Time.deltaTime;
+            if (currentWaveTimer <= 0)
+            {
+                StartNextWave();
+            }
             return;
         }
-        currentTimer -= Time.deltaTime;
-        if (currentTimer <= 0)
+        currentSpawnTimer -= Time.deltaTime;
+        if (currentSpawnTimer <= 0)
         {
             ResetSpawnTimer();
             SpawnRandomEnemy();
         }
     }
 
+    private void StartNextWave()
+    {
+        EnemyWaves.Remove(currentWave);
+        if (EnemyWaves.Count > 0)
+        {
+            currentWave = EnemyWaves.First();
+        }
+
+        currentWaveTimer = timeBetweenWaves;
+    }
+
     private void SpawnRandomEnemy()
     {
-        Enemy selectedEnemy = EnemiesToSpawn[Random.Range(0, EnemiesToSpawn.Count)];
+        Enemy selectedEnemy = currentWave.EnemiesToSpawn[Random.Range(0, currentWave.EnemiesToSpawn.Count)];
         Instantiate(selectedEnemy.gameObject, LevelStart.position,Quaternion.identity);
-        NumberOfEnemies--;
+        currentWave.NumberOfEnemies--;
     }
 
     public Transform GetNextPoint(Transform previousPoint)

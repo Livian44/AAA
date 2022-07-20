@@ -1736,10 +1736,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51b9660c82b1d5548afeb4fee237ffce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <EnemiesToSpawn>k__BackingField:
-  - {fileID: 1416653504851928580, guid: e78d2684c7ce04a4a89aedc31be230a9, type: 3}
-  <NumberOfEnemies>k__BackingField: 10
-  <TimeBetweenEnemySpawns>k__BackingField: 0.5
+  <EnemyWaves>k__BackingField: []
+  <AvaliableTowers>k__BackingField: {fileID: 0}
   <LevelPoints>k__BackingField:
   - {fileID: 4311817110020182000}
   - {fileID: 4311817109962589241}

@@ -16,6 +16,7 @@ public class BasicTower : MonoBehaviour , ITower
     private float currentReloadTime = 0;
     private Enemy currentTarget;
     private CircleCollider2D collider;
+    private SpriteRenderer render;
     private List<Enemy> enemiesInRange = new List<Enemy>();
     private Vector3 lastShootingDirection = Vector3.zero;
     private Animator animator;
@@ -25,6 +26,7 @@ public class BasicTower : MonoBehaviour , ITower
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        render = GetComponent<SpriteRenderer>();
         if (animator == null)
         {
             Debug.Log("Tower is missing animator!");
@@ -54,15 +56,21 @@ public class BasicTower : MonoBehaviour , ITower
             AttackEnemy();
         }
 
-        RotateTower();
+       TurnTower();
     }
 
-    private void RotateTower()
+    private void TurnTower()
     {
-        Vector3 targetDirection = (currentTarget.transform.position - transform.position);
+        Vector3 targetDirection;
+        if ((currentTarget.transform.position - transform.position).x < 0)
+        {
+            render.flipX = true;
+        }else {
+            render.flipX = false;
+        }
         targetDirection.z = 0;
-        float angle = Vector3.SignedAngle(transform.up, targetDirection.normalized,Vector3.back);
-        transform.Rotate(Vector3.back,angle);
+        //float angle = Vector3.SignedAngle(transform.up, targetDirection.normalized,Vector3.back);
+        //transform.Rotate(Vector3.back,angle);
     }
 
 
@@ -109,7 +117,7 @@ public class BasicTower : MonoBehaviour , ITower
 
     private void AttackEnemy()
     {
-        animator.SetBool(animationBoolName,true);
+       // animator.SetBool(animationBoolName,true);
        currentTarget.ReceiveDamage(TowerType.ProjectilePrefab.ProjectileType.Attack);
     }
 

@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     private Transform lastPoint;
     private Transform nextPoint;
     private BoxCollider2D collider;
+    private SpriteRenderer render;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidbody;
     
@@ -23,6 +24,9 @@ public class Enemy : MonoBehaviour
         ConfigureCollider();
         ConfigureStats();
         ConfigureMovement();
+        render = GetComponent<SpriteRenderer>();
+        render.flipX = true;
+
     }
 
     private void ConfigureRigidbody()
@@ -60,10 +64,25 @@ public class Enemy : MonoBehaviour
         Vector3 targetDirection = (nextPoint.position - transform.position).normalized;
         float speed = EnemyType.Speed * Time.deltaTime;
         transform.Translate(targetDirection*speed,Space.World);
-        if (Vector3.Distance(transform.position, nextPoint.position) < 0.1f)
+       if (Vector3.Distance(transform.position, nextPoint.position) < 0.1f)
         {
             CalculateNextPoint();
         }
+    }
+    private void TurnEnemy()
+    {
+        Vector3 targetDirection;
+        if (nextPoint.position.x < lastPoint.position.x)
+        {
+            render.flipX = true;
+        }
+        else
+        {
+            render.flipX = false;
+        }
+        targetDirection.z = 0;
+        //float angle = Vector3.SignedAngle(transform.up, targetDirection.normalized,Vector3.back);
+        //transform.Rotate(Vector3.back,angle);
     }
 
     private void CalculateNextPoint()
@@ -79,8 +98,7 @@ public class Enemy : MonoBehaviour
         }
         Vector3 targetDirection = (nextPoint.position - transform.position).normalized;
         targetDirection.z = 0;
-        float angle = Vector3.SignedAngle(transform.right, targetDirection.normalized,Vector3.back);
-        transform.Rotate(Vector3.back,angle);
+        TurnEnemy();
     }
     
     public void ReceiveDamage(int damage)

@@ -51,4 +51,9 @@ public class GameplayManager : MonoBehaviour
             OnGameEnd?.Invoke();
         }
     }
+
+    private void FinishGame()
+    {
+        OnGameEnd?.Invoke();
+    }
 }

@@ -68,9 +68,10 @@ public class Level : MonoBehaviour
         if (EnemyWaves.Count > 0)
         {
             currentWave = EnemyWaves.First();
+            currentWaveTimer = timeBetweenWaves;
         }
+        GameplayManager.Instance.FinishGame();
 
-        currentWaveTimer = timeBetweenWaves;
     }
 
     private void SpawnRandomEnemy()

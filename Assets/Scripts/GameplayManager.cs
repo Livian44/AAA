@@ -22,10 +22,15 @@ public class GameplayManager : MonoBehaviour
             return instance;
         }
         set => instance = value;
-    }
     
+    }
+
+    [SerializeField]
+    private float value; 
+
     [field:SerializeField]
     public Level Level { get; set; }
+
     [field:SerializeField]
     public PlayerController PlayerController { get; set; }
 
@@ -52,7 +57,7 @@ public class GameplayManager : MonoBehaviour
         }
     }
 
-    private void FinishGame()
+    public void FinishGame()
     {
         OnGameEnd?.Invoke();
     }

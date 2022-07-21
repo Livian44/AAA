@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidbody;
     private bool isFrozen;
+    private bool isSlowed;
     
     void Start()
     {
@@ -66,9 +67,18 @@ public class Enemy : MonoBehaviour
             return;
         }
         Vector3 targetDirection = (nextPoint.position - transform.position).normalized;
-        float speed = EnemyType.Speed * Time.deltaTime;
+        float speed;
+        if (isSlowed)
+        {
+            speed = EnemyType.Speed * Time.deltaTime * 0.5f;
+        }
+        else
+        {
+            speed = EnemyType.Speed * Time.deltaTime;
+        }
+            
         transform.Translate(targetDirection*speed,Space.World);
-       if (Vector3.Distance(transform.position, nextPoint.position) < 0.1f)
+        if (Vector3.Distance(transform.position, nextPoint.position) < 0.1f)
         {
             CalculateNextPoint();
         }
@@ -117,6 +127,11 @@ public class Enemy : MonoBehaviour
             isFrozen = true;
             Invoke("FreezEnemy", 0.5f);
         }
+        if (type == 2)
+        {
+            isSlowed = true;
+            Invoke("normalSpeed", 1f);
+        }
         if (health <= 0)
         {
             GameplayManager.Instance.EnemyKilledByPlayer();
@@ -124,6 +139,10 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void normalSpeed()
+    {
+        isSlowed = false;
+    }
     private void FreezEnemy()
     {
         isFrozen = false;
@@ -132,6 +151,11 @@ public class Enemy : MonoBehaviour
         speed.y = 0;
         speed.z = 0;
         transform.Translate(speed, Space.World);
+    }
+
+    private void SlowEnemy()
+    {
+
     }
 
     private void KillEnemy()

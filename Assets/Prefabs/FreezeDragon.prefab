@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7191882669043665319}
-  - component: {fileID: 7002572514146200268}
   - component: {fileID: 7191882669043665317}
   - component: {fileID: 7002572514146200269}
   - component: {fileID: 320767996443059626}
@@ -35,19 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7002572514146200268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7191882669043665318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 808bfa3bfa30489c83db15b0349adab7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <TowerType>k__BackingField: {fileID: 11400000, guid: 16a09993b05995143943b154140b1534, type: 2}
 --- !u!58 &7191882669043665317
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -63,7 +49,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.1
 --- !u!212 &7002572514146200269
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -128,4 +114,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81bd7e0e524100d4cb05fc4a920b077f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <TowerType>k__BackingField: {fileID: 11400000, guid: e4595d76de585d046abfdab9e76efbe8, type: 2}
+  <TowerType>k__BackingField: {fileID: 11400000, guid: ea9ce9724e5c0ae40a9fb64a25ad5bd8, type: 2}

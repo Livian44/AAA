@@ -19,14 +19,13 @@ public class Enemy : MonoBehaviour
     
     void Start()
     {
+        render = GetComponent<SpriteRenderer>();
+        render.flipX = false;
         ConfigureRigidbody();
         ConfigureRenderer();
         ConfigureCollider();
         ConfigureStats();
         ConfigureMovement();
-        render = GetComponent<SpriteRenderer>();
-        render.flipX = true;
-
     }
 
     private void ConfigureRigidbody()
@@ -72,13 +71,14 @@ public class Enemy : MonoBehaviour
     private void TurnEnemy()
     {
         Vector3 targetDirection;
+        Debug.Log(render);
         if (nextPoint.position.x < lastPoint.position.x)
         {
-            render.flipX = true;
+            render.flipX = false;
         }
         else
         {
-            render.flipX = false;
+            render.flipX = true;
         }
         targetDirection.z = 0;
         //float angle = Vector3.SignedAngle(transform.up, targetDirection.normalized,Vector3.back);
@@ -87,7 +87,10 @@ public class Enemy : MonoBehaviour
 
     private void CalculateNextPoint()
     {
-        lastPoint = nextPoint;
+        if (nextPoint != null)
+        {
+            lastPoint = nextPoint;
+        }
         nextPoint = GetNextPoint();
         if (nextPoint == null)
         {

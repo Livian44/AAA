@@ -11,7 +11,7 @@ public class TowerType : ScriptableObject
     public Projectile ProjectilePrefab { get; set; }
 
     [field: SerializeField] 
-    public int Range { get; set; } = 1;
+    public float Range { get; set; } = 1;
 
     [field: SerializeField,Range(0.1f,5f)] 
     public float ReloadTime { get; set; } = 1;

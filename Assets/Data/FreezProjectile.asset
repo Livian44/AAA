@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 986ba70cf5e44ef6aec5b11b54f3ef90, type: 3}
-  m_Name: BasicProjectile
+  m_Name: FreezProjectile
   m_EditorClassIdentifier: 
-  <Sprite>k__BackingField: {fileID: -1506282798, guid: fbd0c207c9b50b6479b0a71916a396df, type: 3}
+  <Sprite>k__BackingField: {fileID: 1051633857, guid: 716088cd1d3e70640bc84dbc187f394f, type: 3}
   <Attack>k__BackingField: 1
   <Speed>k__BackingField: 3

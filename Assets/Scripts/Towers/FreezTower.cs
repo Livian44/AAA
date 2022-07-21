@@ -47,7 +47,7 @@ public class FreezTower : MonoBehaviour, ITower
     {
         if (currentTarget == null)
         {
-            animator.SetBool(animationBoolName,false);
+            //animator.SetBool(animationBoolName,false);
             SearchForNewTarget();
             return;
         }
@@ -55,10 +55,22 @@ public class FreezTower : MonoBehaviour, ITower
         if (currentReloadTime <= 0)
         {
             ResetSpawnTimer();
-            AttackEnemy();
+            SpawnProjectile();
         }
 
        TurnTower();
+    }
+
+    private void SpawnProjectile()
+    {
+        Vector3 direction = (currentTarget.transform.position - transform.position).normalized;
+        lastShootingDirection = direction;
+        GameObject projectile = Instantiate(TowerType.ProjectilePrefab.gameObject, transform.position, Quaternion.identity);
+        direction.z = 0;
+
+        float projectileAngle = Vector3.SignedAngle(projectile.transform.up, direction.normalized, Vector3.back);
+        projectile.transform.Rotate(Vector3.back, projectileAngle);
+        currentTarget.ReceiveDamage(TowerType.ProjectilePrefab.ProjectileType.Attack, 1);
     }
 
     private void TurnTower()
@@ -75,13 +87,13 @@ public class FreezTower : MonoBehaviour, ITower
         //transform.Rotate(Vector3.back,angle);
     }
 
-    private void AttackEnemy()
+    /*private void AttackEnemy()
     {
 
-        animation.Play();
-        //animator.SetBool(animationBoolName,true);
-        currentTarget.ReceiveDamage(TowerType.ProjectilePrefab.ProjectileType.Attack, 1);
-    }
+        //animation.Play();
+        animator.SetBool(animationBoolName,true);
+        
+    }*/
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Enemy enemy = collision.gameObject.GetComponent<Enemy>();

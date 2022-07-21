@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EarthDragon
   m_EditorClassIdentifier: 
   <Sprite>k__BackingField: {fileID: 1376192831, guid: 3c8e3f881cf679e468564d4b9ea36e6e, type: 3}
-  <ProjectilePrefab>k__BackingField: {fileID: 747532892797731706, guid: ec8d396e16cf8504884e5fef99418d28, type: 3}
+  <ProjectilePrefab>k__BackingField: {fileID: -7793250497872872843, guid: 88b7236a5af675d4e8c4f146df3ca190, type: 3}
   <Range>k__BackingField: 1
   <ReloadTime>k__BackingField: 0.65
   <Price>k__BackingField: 5

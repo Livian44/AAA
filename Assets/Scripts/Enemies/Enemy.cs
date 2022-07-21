@@ -70,7 +70,7 @@ public class Enemy : MonoBehaviour
         float speed;
         if (isSlowed)
         {
-            speed = EnemyType.Speed * Time.deltaTime * 0.5f;
+            speed = EnemyType.Speed * Time.deltaTime * 0.2f;
         }
         else
         {

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BasicDragon
   m_EditorClassIdentifier: 
   <Sprite>k__BackingField: {fileID: -61114609, guid: 3c8e3f881cf679e468564d4b9ea36e6e, type: 3}
-  <ProjectilePrefab>k__BackingField: {fileID: 747532892797731706, guid: ec8d396e16cf8504884e5fef99418d28, type: 3}
+  <ProjectilePrefab>k__BackingField: {fileID: -7793250497872872843, guid: 5931624d4c5c5b946a173b3ff2eb9e68, type: 3}
   <Range>k__BackingField: 2
   <ReloadTime>k__BackingField: 0.65
   <Price>k__BackingField: 2

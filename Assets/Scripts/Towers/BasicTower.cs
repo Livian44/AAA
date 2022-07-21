@@ -53,11 +53,13 @@ public class BasicTower : MonoBehaviour , ITower
         if (currentReloadTime <= 0)
         {
             ResetSpawnTimer();
-            AttackEnemy();
+            SpawnProjectile();
         }
 
        TurnTower();
     }
+
+   
 
     private void TurnTower()
     {
@@ -68,7 +70,7 @@ public class BasicTower : MonoBehaviour , ITower
         }else {
             render.flipX = false;
         }
-        //targetDirection.z = 0;
+        targetDirection.z = 0;
         //float angle = Vector3.SignedAngle(transform.up,targetDirection.normalized,Vector3.back);
         //transform.Rotate(Vector3.back,angle);
     }
@@ -100,6 +102,7 @@ public class BasicTower : MonoBehaviour , ITower
         if (enemy == currentTarget)
         {
             SearchForNewTarget();
+            SpawnProjectile();
         }
     }
 
@@ -115,13 +118,25 @@ public class BasicTower : MonoBehaviour , ITower
         }
     }
 
-    private void AttackEnemy()
+    /*private void AttackEnemy()
     {
-       // animator.SetBool(animationBoolName,true);
+       animator.SetBool(animationBoolName,true);
        currentTarget.ReceiveDamage(TowerType.ProjectilePrefab.ProjectileType.Attack, 0);
+    }*/
+
+    private void SpawnProjectile()
+    {
+        Vector3 direction = (currentTarget.transform.position - transform.position).normalized;
+        lastShootingDirection = direction;
+        GameObject projectile = Instantiate(TowerType.ProjectilePrefab.gameObject, transform.position, Quaternion.identity);
+        direction.z = 0;
+
+        float projectileAngle = Vector3.SignedAngle(projectile.transform.up, direction.normalized, Vector3.back);
+        projectile.transform.Rotate(Vector3.back, projectileAngle);
+        currentTarget.ReceiveDamage(TowerType.ProjectilePrefab.ProjectileType.Attack, 0);
     }
 
-    
+
 
     private void OnDrawGizmos()
     {

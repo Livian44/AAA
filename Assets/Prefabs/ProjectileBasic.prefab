@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 747532892797731589}
   - component: {fileID: 747532892797731588}
+  - component: {fileID: -7793250497872872843}
   - component: {fileID: 747532892797731707}
-  - component: {fileID: 2184996257823797470}
+  - component: {fileID: 5071364354649190687}
   m_Layer: 0
-  m_Name: ProjectileFreez
+  m_Name: ProjectileBasic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 747532892797731705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,10 +76,10 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -553789742, guid: 77be49ff919a6fd44981b568408412cd, type: 3}
+  m_Sprite: {fileID: 1800895489, guid: 3599d4488938f204988e88d1bbae0d40, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
@@ -86,6 +87,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-7793250497872872843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747532892797731705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e01467052034bd193bfb667f95a3e43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ProjectileType>k__BackingField: {fileID: 11400000, guid: d8f79ee2cd1411143870ef56691843b0, type: 2}
 --- !u!61 &747532892797731707
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -103,7 +117,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.0703125, y: 0.1953125}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -112,16 +126,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0001, y: 0.0001}
   m_EdgeRadius: 0
---- !u!114 &2184996257823797470
-MonoBehaviour:
+--- !u!58 &5071364354649190687
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 747532892797731705}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7af3509a9350d424382abe8de86e2997, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <ProjectileType>k__BackingField: {fileID: 11400000, guid: 02ab540efa809de44ae897400a2a64b0, type: 2}
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1015625

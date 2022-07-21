@@ -31,7 +31,6 @@ public class Level : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Lukasz start");
         
         currentWaveTimer = timeBetweenWaves;
         currentWave = EnemyWaves.First();

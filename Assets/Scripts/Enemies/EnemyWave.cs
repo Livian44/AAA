@@ -15,5 +15,10 @@ namespace DefaultNamespace
     
         [field: SerializeField] 
         public float TimeBetweenEnemySpawns { get; set; } = 0.5f;
+        public bool isEmpty()
+        {
+            return !(EnemiesToSpawn.Count > 0);
+        }
     }
+    
 }

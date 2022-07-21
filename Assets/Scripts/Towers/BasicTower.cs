@@ -45,7 +45,7 @@ public class BasicTower : MonoBehaviour , ITower
     {
         if (currentTarget == null)
         {
-            animator.SetBool(animationBoolName,false);
+           // animator.SetBool(animationBoolName,false);
             SearchForNewTarget();
             return;
         }

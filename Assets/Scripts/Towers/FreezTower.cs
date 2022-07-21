@@ -6,7 +6,7 @@ using BuildingSystem.Interfaces;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer),typeof(CircleCollider2D))]
-public class BasicTower : MonoBehaviour , ITower
+public class FreezTower : MonoBehaviour, ITower
 {
     [field:SerializeField]
     public TowerType TowerType { get; set; }
@@ -21,8 +21,8 @@ public class BasicTower : MonoBehaviour , ITower
     private Vector3 lastShootingDirection = Vector3.zero;
     private Animator animator;
     private string animationBoolName = "IsShooting";
-    
 
+    
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
@@ -61,19 +61,23 @@ public class BasicTower : MonoBehaviour , ITower
 
     private void TurnTower()
     {
-        Vector3 targetDirection = (currentTarget.transform.position - transform.position);
+        Vector3 targetDirection;
         if ((currentTarget.transform.position - transform.position).x < 0)
         {
             render.flipX = true;
         }else {
             render.flipX = false;
         }
-        //targetDirection.z = 0;
-        //float angle = Vector3.SignedAngle(transform.up,targetDirection.normalized,Vector3.back);
+        targetDirection.z = 0;
+        //float angle = Vector3.SignedAngle(transform.up, targetDirection.normalized,Vector3.back);
         //transform.Rotate(Vector3.back,angle);
     }
 
-
+    private void AttackEnemy()
+    {
+        // animator.SetBool(animationBoolName,true);
+        currentTarget.ReceiveDamage(TowerType.ProjectilePrefab.ProjectileType.Attack, 1);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Enemy enemy = collision.gameObject.GetComponent<Enemy>();
@@ -114,14 +118,6 @@ public class BasicTower : MonoBehaviour , ITower
             currentTarget = enemiesInRange.First();
         }
     }
-
-    private void AttackEnemy()
-    {
-       // animator.SetBool(animationBoolName,true);
-       currentTarget.ReceiveDamage(TowerType.ProjectilePrefab.ProjectileType.Attack, 0);
-    }
-
-    
 
     private void OnDrawGizmos()
     {

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7002572514146200268}
   - component: {fileID: 7191882669043665317}
   - component: {fileID: 7002572514146200269}
+  - component: {fileID: 320767996443059626}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Untagged
@@ -115,3 +116,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &320767996443059626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7191882669043665318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81bd7e0e524100d4cb05fc4a920b077f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <TowerType>k__BackingField: {fileID: 11400000, guid: e4595d76de585d046abfdab9e76efbe8, type: 2}

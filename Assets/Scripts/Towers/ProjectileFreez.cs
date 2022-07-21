@@ -4,7 +4,7 @@ using UnityEngine;
 namespace DefaultNamespace
 {
     [RequireComponent(typeof(SpriteRenderer),typeof(BoxCollider2D))]
-    public class Projectile : MonoBehaviour
+    public class ProjectileFreez : MonoBehaviour
     {
         [field: SerializeField] 
         public ProjectileType ProjectileType { get; set; }
@@ -29,7 +29,7 @@ namespace DefaultNamespace
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             if (enemy)
             {
-                enemy.ReceiveDamage(ProjectileType.Attack, 0);
+                enemy.ReceiveDamage(ProjectileType.Attack, 1);
             }
             Destroy(gameObject);
         }

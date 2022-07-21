@@ -6,6 +6,7 @@ using DefaultNamespace;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class Level : MonoBehaviour
@@ -18,6 +19,8 @@ public class Level : MonoBehaviour
     public List<Transform> LevelPoints { get; set; }
     public Transform LevelStart => LevelPoints.First();
     public Transform LevelEnd => LevelPoints.Last();
+
+    public UnityEvent OnGameEnd;
 
     [field:SerializeField]
     public Tilemap TurretTilemap { get; set; }
@@ -67,6 +70,12 @@ public class Level : MonoBehaviour
         if (EnemyWaves.Count > 0)
         {
             currentWave = EnemyWaves.First();
+        }
+        else
+        {
+                Debug.Log("No more enemies to spawn - we have won!");
+                OnGameEnd?.Invoke();
+
         }
 
         currentWaveTimer = timeBetweenWaves;

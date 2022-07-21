@@ -50,7 +50,9 @@ public class GameplayManager : MonoBehaviour
         playerHealth -= value;
         if (playerHealth <= 0)
         {
+            Time.timeScale = 0;
             OnGameEnd?.Invoke();
         }
+
     }
 }

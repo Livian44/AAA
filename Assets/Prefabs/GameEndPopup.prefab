@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 615258443}
   - component: {fileID: 615258442}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: Image1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 1613764582}
   - component: {fileID: 1613764581}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Image3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -299,6 +299,7 @@ GameObject:
   - component: {fileID: 6039458664111196397}
   - component: {fileID: 6039458664111196394}
   - component: {fileID: 6039458664111196395}
+  - component: {fileID: 2121548041}
   m_Layer: 5
   m_Name: GameEndPopup
   m_TagString: Untagged
@@ -388,6 +389,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2121548041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6039458664111196392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b87db0e5f8e6b564fad0cf9503938105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstTierImage: {fileID: 615258442}
+  secondTierImage: {fileID: 6039458665819390764}
+  thirdTierImage: {fileID: 1613764581}
+  score: 0
 --- !u!1 &6039458664198419272
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,7 +767,7 @@ GameObject:
   - component: {fileID: 6039458665819390767}
   - component: {fileID: 6039458665819390764}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Image 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2328,7 +2328,7 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!1 &2462379382125859823
+--- !u!1 &2354821945035363276
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2336,9 +2336,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5896484846842638962}
-  - component: {fileID: 7809367799432593451}
-  - component: {fileID: 3459156443075286245}
+  - component: {fileID: 8188359544334178280}
+  - component: {fileID: 9068498064658170997}
+  - component: {fileID: 4083670021907612757}
   m_Layer: 0
   m_Name: Tilemap (1)
   m_TagString: Untagged
@@ -2346,13 +2346,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5896484846842638962
+--- !u!4 &8188359544334178280
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2462379382125859823}
+  m_GameObject: {fileID: 2354821945035363276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -2361,13 +2361,13 @@ Transform:
   m_Father: {fileID: 4870315851886170560}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1839735485 &7809367799432593451
+--- !u!1839735485 &9068498064658170997
 Tilemap:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2462379382125859823}
+  m_GameObject: {fileID: 2354821945035363276}
   m_Enabled: 1
   m_Tiles:
   - first: {x: 0, y: -7, z: 0}
@@ -2649,13 +2649,13 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!483693784 &3459156443075286245
+--- !u!483693784 &4083670021907612757
 TilemapRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2462379382125859823}
+  m_GameObject: {fileID: 2354821945035363276}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -2807,6 +2807,10 @@ MonoBehaviour:
     - {fileID: 1416653504851928580, guid: f233e00da2d4cfb48864400b57ee1b2d, type: 3}
     <NumberOfEnemies>k__BackingField: 84
     <TimeBetweenEnemySpawns>k__BackingField: 0.25
+  - <EnemiesToSpawn>k__BackingField:
+    - {fileID: 1416653504851928580, guid: 1d5b2780e6569504083a10aa71d532a7, type: 3}
+    <NumberOfEnemies>k__BackingField: 1
+    <TimeBetweenEnemySpawns>k__BackingField: 0.25
   <AvaliableTowers>k__BackingField: {fileID: 11400000, guid: 1f1f31ce7e2605b438e3efe07d07256a, type: 2}
   <LevelPoints>k__BackingField:
   - {fileID: 4311817110020182000}
@@ -2831,6 +2835,9 @@ MonoBehaviour:
   - {fileID: 4311817111881551666}
   - {fileID: 4311817110159812293}
   - {fileID: 4311817110276381164}
+  OnGameEnd:
+    m_PersistentCalls:
+      m_Calls: []
   <TurretTilemap>k__BackingField: {fileID: 4303803829655460433}
   pathParent: {fileID: 6827845385994415826}
 --- !u!1 &6827845385994415825

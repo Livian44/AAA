@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1343060678189675214}
   - component: {fileID: 8499006413278454982}
   m_Layer: 0
-  m_Name: Enemy3
+  m_Name: SomethingFromHell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1206844468, guid: 77be49ff919a6fd44981b568408412cd, type: 3}
+  m_Sprite: {fileID: -1714240342, guid: acaae0ec83e1e1b479a7774475aa1a3c, type: 3}
   m_Color: {r: 0.2795018, g: 0.2924528, b: 0.10898005, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,7 +117,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.25, y: 0.3}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

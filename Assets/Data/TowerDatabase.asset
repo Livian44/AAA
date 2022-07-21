@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TowerDatabase
   m_EditorClassIdentifier: 
   <Towers>k__BackingField:
-  - {fileID: 7191882669043665318, guid: 47abc48506b631f4995aed00802a70e8, type: 3}
+  - {fileID: 7191882669043665318, guid: 5aa05ddc8dfbf724d80362780f85382a, type: 3}
   - {fileID: 7191882669043665318, guid: 01ed9675784c0ec4fac9edb74ba98303, type: 3}
   - {fileID: 7191882669043665318, guid: fbcf483ad322f3f47a9c627f96b58fd5, type: 3}
   - {fileID: 1110378867008470155, guid: eb1a9dcb52fad8d40b3e62003519ed4f, type: 3}

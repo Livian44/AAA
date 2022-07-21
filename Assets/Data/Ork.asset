@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fa9e2dac81fe4f4583919cf004623e6, type: 3}
-  m_Name: Enemy2
+  m_Name: Ork
   m_EditorClassIdentifier: 
-  <Sprite>k__BackingField: {fileID: 1549585826, guid: 77be49ff919a6fd44981b568408412cd, type: 3}
+  <Sprite>k__BackingField: {fileID: 1662214897, guid: acaae0ec83e1e1b479a7774475aa1a3c, type: 3}
   <Attack>k__BackingField: 1
-  <Health>k__BackingField: 7
+  <Health>k__BackingField: 5
   <Speed>k__BackingField: 3

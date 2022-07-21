@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 747532892797731589}
   - component: {fileID: 747532892797731588}
   - component: {fileID: 747532892797731707}
-  - component: {fileID: 747532892797731706}
   - component: {fileID: 2184996257823797470}
   m_Layer: 0
   m_Name: ProjectileFreez
@@ -76,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 595199004, guid: 77be49ff919a6fd44981b568408412cd, type: 3}
+  m_Sprite: {fileID: -553789742, guid: 77be49ff919a6fd44981b568408412cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -113,19 +112,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0001, y: 0.0001}
   m_EdgeRadius: 0
---- !u!114 &747532892797731706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747532892797731705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e01467052034bd193bfb667f95a3e43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <ProjectileType>k__BackingField: {fileID: 11400000, guid: 02ab540efa809de44ae897400a2a64b0, type: 2}
 --- !u!114 &2184996257823797470
 MonoBehaviour:
   m_ObjectHideFlags: 0

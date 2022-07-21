@@ -21,10 +21,12 @@ public class FreezTower : MonoBehaviour, ITower
     private Vector3 lastShootingDirection = Vector3.zero;
     private Animator animator;
     private string animationBoolName = "IsShooting";
+    private Animation animation;
 
     
     void Start()
     {
+        animation = GetComponent<Animation>();
         animator = GetComponentInChildren<Animator>();
         render = GetComponent<SpriteRenderer>();
         if (animator == null)
@@ -75,7 +77,9 @@ public class FreezTower : MonoBehaviour, ITower
 
     private void AttackEnemy()
     {
-        // animator.SetBool(animationBoolName,true);
+
+        animation.Play();
+        //animator.SetBool(animationBoolName,true);
         currentTarget.ReceiveDamage(TowerType.ProjectilePrefab.ProjectileType.Attack, 1);
     }
     private void OnTriggerEnter2D(Collider2D collision)

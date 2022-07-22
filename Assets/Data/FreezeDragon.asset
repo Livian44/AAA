@@ -16,4 +16,4 @@ MonoBehaviour:
   <ProjectilePrefab>k__BackingField: {fileID: 747532892797731706, guid: ec8d396e16cf8504884e5fef99418d28, type: 3}
   <Range>k__BackingField: 0.5
   <ReloadTime>k__BackingField: 0.4
-  <Price>k__BackingField: 5
+  <Price>k__BackingField: 7

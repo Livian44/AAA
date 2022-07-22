@@ -32,7 +32,15 @@ public class GameplayManager : MonoBehaviour
     public PlayerController PlayerController { get; set; }
 
     private int playerHealth = 30;
-    
+
+    public int timeScale = 1;
+
+    private void Update()
+    {
+        if(Time.timeScale >0)
+        Time.timeScale = timeScale;
+    }
+
     public void EnemyKilledByPlayer()
     {
         PlayerController.IncreasePlayerMoney(1);
@@ -50,6 +58,7 @@ public class GameplayManager : MonoBehaviour
         playerHealth -= value;
         if (playerHealth <= 0)
         {
+            Debug.Log("Game end 1");
             Time.timeScale = 0;
             OnGameEnd?.Invoke();
         }

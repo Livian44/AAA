@@ -157,6 +157,12 @@ public class Enemy : MonoBehaviour
     private void KillEnemy()
     {
         Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+
+        Debug.Log("Enemy is dead! " + Global.enemyCount);
         Global.enemyCount--;
     }
 

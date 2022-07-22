@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BigBoss
   m_EditorClassIdentifier: 
   <Sprite>k__BackingField: {fileID: 678052232, guid: 8b92e9eb6c85fc84588156fa22143723, type: 3}
-  <Attack>k__BackingField: 10
-  <Health>k__BackingField: 1000
+  <Attack>k__BackingField: 30
+  <Health>k__BackingField: 1500
   <Speed>k__BackingField: 1

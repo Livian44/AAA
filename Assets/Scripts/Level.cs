@@ -47,6 +47,19 @@ public class Level : MonoBehaviour
 
     public void Update()
     {
+
+        if (EnemyWaves.Count <= 0)
+        {
+
+            if (Global.enemyCount <= 0)
+            {
+                Debug.Log("Game end 2");
+                Time.timeScale = 0;
+                OnGameEnd?.Invoke();
+            }
+
+
+        }
         if (currentWave.NumberOfEnemies <= 0)
         {
             currentWaveTimer -= Time.deltaTime;
@@ -71,6 +84,7 @@ public class Level : MonoBehaviour
         {
             currentWave = EnemyWaves.First();
         }
+        /*
         else
         {
             if(Global.enemyCount <= 0)
@@ -81,7 +95,7 @@ public class Level : MonoBehaviour
             }
            
 
-        }
+        } */
 
         currentWaveTimer = timeBetweenWaves;
     }

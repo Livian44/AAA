@@ -2794,21 +2794,17 @@ MonoBehaviour:
   - <EnemiesToSpawn>k__BackingField:
     - {fileID: 1416653504851928580, guid: e78d2684c7ce04a4a89aedc31be230a9, type: 3}
     - {fileID: 1416653504851928580, guid: 6fe03835ed9fd8845bad483bea7c0e95, type: 3}
-    <NumberOfEnemies>k__BackingField: 10
+    <NumberOfEnemies>k__BackingField: 1
     <TimeBetweenEnemySpawns>k__BackingField: 0.5
   - <EnemiesToSpawn>k__BackingField:
     - {fileID: 1416653504851928580, guid: e78d2684c7ce04a4a89aedc31be230a9, type: 3}
     - {fileID: 1416653504851928580, guid: 6fe03835ed9fd8845bad483bea7c0e95, type: 3}
-    <NumberOfEnemies>k__BackingField: 20
+    <NumberOfEnemies>k__BackingField: 1
     <TimeBetweenEnemySpawns>k__BackingField: 0.25
   - <EnemiesToSpawn>k__BackingField:
     - {fileID: 1416653504851928580, guid: e78d2684c7ce04a4a89aedc31be230a9, type: 3}
     - {fileID: 1416653504851928580, guid: 6fe03835ed9fd8845bad483bea7c0e95, type: 3}
     - {fileID: 1416653504851928580, guid: f233e00da2d4cfb48864400b57ee1b2d, type: 3}
-    <NumberOfEnemies>k__BackingField: 84
-    <TimeBetweenEnemySpawns>k__BackingField: 0.25
-  - <EnemiesToSpawn>k__BackingField:
-    - {fileID: 1416653504851928580, guid: 1d5b2780e6569504083a10aa71d532a7, type: 3}
     <NumberOfEnemies>k__BackingField: 1
     <TimeBetweenEnemySpawns>k__BackingField: 0.25
   <AvaliableTowers>k__BackingField: {fileID: 11400000, guid: 1f1f31ce7e2605b438e3efe07d07256a, type: 2}
@@ -2837,7 +2833,19 @@ MonoBehaviour:
   - {fileID: 4311817110276381164}
   OnGameEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   <TurretTilemap>k__BackingField: {fileID: 4303803829655460433}
   pathParent: {fileID: 6827845385994415826}
 --- !u!1 &6827845385994415825

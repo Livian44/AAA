@@ -34,10 +34,10 @@ public class GameEndPopup : MonoBehaviour
         Time.timeScale = 0;
         OnGameEnd?.Invoke();
 
-        if (score < 100)
+        if (score <= 100)
         {
             firstTierImage.color = Color.red;
-        } else if(score < 300)
+        } else if(score <= 300)
         {
             firstTierImage.color = Color.red;
             secondTierImage.color = Color.red;

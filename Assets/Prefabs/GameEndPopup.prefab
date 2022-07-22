@@ -405,6 +405,9 @@ MonoBehaviour:
   secondTierImage: {fileID: 6039458665819390764}
   thirdTierImage: {fileID: 1613764581}
   score: 0
+  OnGameEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6039458664198419272
 GameObject:
   m_ObjectHideFlags: 0

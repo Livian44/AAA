@@ -73,7 +73,7 @@ public class Level : MonoBehaviour
         }
         else
         {
-            if(currentWave.isEmpty())
+            if(Global.enemyCount <= 0)
             {
                 Debug.Log("No more enemies to spawn - we have won!");
                 Time.timeScale = 0;

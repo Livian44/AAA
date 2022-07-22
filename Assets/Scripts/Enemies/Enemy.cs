@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour
         ConfigureCollider();
         ConfigureStats();
         ConfigureMovement();
+        Global.enemyCount++;
     }
 
     private void ConfigureRigidbody()
@@ -153,14 +154,10 @@ public class Enemy : MonoBehaviour
         transform.Translate(speed, Space.World);
     }
 
-    private void SlowEnemy()
-    {
-
-    }
-
     private void KillEnemy()
     {
         Destroy(gameObject);
+        Global.enemyCount--;
     }
 
     private Transform GetNextPoint()

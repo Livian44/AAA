@@ -73,8 +73,13 @@ public class Level : MonoBehaviour
         }
         else
         {
+            if(Global.enemyCount <= 0)
+            {
                 Debug.Log("No more enemies to spawn - we have won!");
+                Time.timeScale = 0;
                 OnGameEnd?.Invoke();
+            }
+           
 
         }
 
@@ -86,6 +91,7 @@ public class Level : MonoBehaviour
         Enemy selectedEnemy = currentWave.EnemiesToSpawn[Random.Range(0, currentWave.EnemiesToSpawn.Count)];
         Instantiate(selectedEnemy.gameObject, LevelStart.position,Quaternion.identity);
         currentWave.NumberOfEnemies--;
+
     }
 
     public Transform GetNextPoint(Transform previousPoint)

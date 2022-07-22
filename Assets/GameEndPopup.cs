@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class GameEndPopup : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class GameEndPopup : MonoBehaviour
     [SerializeField]
     private int score;
 
+    public UnityEvent OnGameEnd;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,11 +30,14 @@ public class GameEndPopup : MonoBehaviour
     {
         Debug.Log("I have ended the game");
         score = GameplayManager.Instance.PlayerController.CurrentScore;
-       
-        if(score < 100)
+
+        Time.timeScale = 0;
+        OnGameEnd?.Invoke();
+
+        if (score <= 100)
         {
             firstTierImage.color = Color.red;
-        } else if(score < 300)
+        } else if(score <= 300)
         {
             firstTierImage.color = Color.red;
             secondTierImage.color = Color.red;

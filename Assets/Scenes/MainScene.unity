@@ -4296,7 +4296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
       propertyPath: <EnemyWaves>k__BackingField.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
       propertyPath: OnGameEnd.m_PersistentCalls.m_Calls.Array.size
@@ -4335,6 +4335,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.data[4].<NumberOfEnemies>k__BackingField
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
       propertyPath: OnGameEnd.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
@@ -4347,12 +4351,28 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.data[1].<TimeBetweenEnemySpawns>k__BackingField
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
       propertyPath: <EnemyWaves>k__BackingField.Array.data[2].<TimeBetweenEnemySpawns>k__BackingField
-      value: 0.25
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.data[3].<TimeBetweenEnemySpawns>k__BackingField
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.data[4].<TimeBetweenEnemySpawns>k__BackingField
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
       propertyPath: <EnemyWaves>k__BackingField.Array.data[3].<EnemiesToSpawn>k__BackingField.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.data[4].<EnemiesToSpawn>k__BackingField.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
       propertyPath: <EnemyWaves>k__BackingField.Array.data[3].<EnemiesToSpawn>k__BackingField.Array.data[0]
@@ -4366,6 +4386,18 @@ PrefabInstance:
       propertyPath: <EnemyWaves>k__BackingField.Array.data[3].<EnemiesToSpawn>k__BackingField.Array.data[2]
       value: 
       objectReference: {fileID: 1416653504851928580, guid: f233e00da2d4cfb48864400b57ee1b2d, type: 3}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.data[4].<EnemiesToSpawn>k__BackingField.Array.data[0]
+      value: 
+      objectReference: {fileID: 1416653504851928580, guid: f233e00da2d4cfb48864400b57ee1b2d, type: 3}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.data[4].<EnemiesToSpawn>k__BackingField.Array.data[1]
+      value: 
+      objectReference: {fileID: 1416653504851928580, guid: e78d2684c7ce04a4a89aedc31be230a9, type: 3}
+    - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
+      propertyPath: <EnemyWaves>k__BackingField.Array.data[4].<EnemiesToSpawn>k__BackingField.Array.data[2]
+      value: 
+      objectReference: {fileID: 1416653504851928580, guid: 6fe03835ed9fd8845bad483bea7c0e95, type: 3}
     - target: {fileID: 6827845385201344410, guid: 1d03c9bbff3599240bbd823f198c4cf4, type: 3}
       propertyPath: OnGameEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
